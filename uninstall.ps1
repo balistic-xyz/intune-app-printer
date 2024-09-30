@@ -7,5 +7,3 @@ $printerPortIP = "11.10.10.10" # IP address of the printer
 Get-Printer | Where-Object { $_.PortName -eq "$printerPortName" } | Remove-Printer
 Remove-PrinterPort -Name $printerPortName
 Remove-PrinterDriver -Name "$driverPrinterModel"
-
-#Start-Process PNPUtil -ArgumentList "/delete-driver", "$driverINF" - commented as you can have multiple printers using the same driver
