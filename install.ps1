@@ -4,9 +4,6 @@ $driverPrinterModel = "Canon iR2016 UFRII LT" # for example: Canon iR2016 UFRII 
 $printerPortName = "Canon HR"
 $printerPortIP = "11.10.10.10" # IP address of the printer
 
-# detection rule: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Printers\$printerName in clear
-# install command: %SystemRoot%\SysNative\WindowsPowershell\v1.0\PowerShell.exe -noprofile -ExecutionPolicy ByPass -File .\install.ps1
-
 Start-Process PNPUtil -ArgumentList "/add-driver", "driver\$driverINF"
 
 # check for printer port
